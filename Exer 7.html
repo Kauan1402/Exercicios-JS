@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial de Número</title>
+</head>
+<body>
+    <h1>Atividade 7</h1>
+
+    <form id="Fatorial">
+        <label for="fator">Digite um número: </label>
+        <input type="number" id="fator" required>
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+<script>
+    const fatorial = document.getElementById('Fatorial');
+
+    fatorial.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const fator1 = document.getElementById('fator').value;
+
+    const fatorar = calcularFatorial(fator1);
+    alert('O número fatorado é: ' + fatorar)
+    });
+
+    function calcularFatorial(numero) {
+        if (numero === 0 || numero === 1) {
+            return 1;
+        } else {
+            let resultado = 1;
+            for (let i = 2; i <= numero; i++) {
+                resultado *= i;
+            }
+            return resultado;
+        }
+}
+
+</script>
+<body>
+    <a href="Exer 8.html">Próximo</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior número de um vetor</title>
+</head>
+<body>
+    <h1>Atividade 9</h1>
+    <a href="Exer 10.html">Próximo</a>
+    
+</body>
+<script>
+    let vetor = [90, 64, 37, 21, 55]
+    let maiornum = vetor[0];
+
+    for (let i = 1; vetor[i]; i++){
+        if (vetor[i] > maiornum){
+            maiornum = vetor[i];
+        }
+    }
+    alert("O maior número do vetor é " + maiornum);
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média dos elementos da Matriz</title>
+</head>
+<body>
+    <h1>Atividade 10</h1>
+
+    <form id="Matrix">
+        <label>Calcular Média da Matriz: </label>
+        <p>[0, 5, 10]</p>
+        <p>[15, 20, 25]</p>
+        <p>[30, 35, 40]</p>
+    
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+<script>
+    const matrix1 = document.getElementById('Matrix');
+
+    matrix1.addEventListener('submit', function(event) {
+        event.preventDefault();
+            const matrix = [
+            [0, 5, 10],
+            [15, 20, 25],
+            [30, 35, 40]
+        ];
+
+        function mediaMatrix(matriz) {
+            let soma = 0;
+            let contador = 0;
+
+
+            for (let i = 0; i < matriz.length; i++) {
+                for (let j = 0; j < matriz[i].length; j++) {
+                    soma += matriz[i][j];
+                    contador++;
+                }
+            }
+            const media = soma / contador;
+            return media;
+        }
+        const resul = mediaMatrix(matrix);
+        alert('A média da matriz é: ' + resul);
+    });
+</script>
+<body>
+    <h3>Terminou!</h3>
+</body>
+</html>
